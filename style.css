@@ -83,11 +83,38 @@ button{
 
 
 
+
 /*Moviles muy pequeños*/
 @media only screen and (max-width: 320px) {
     h1{
         display: none;
     }
+
+    /*Input*/
+    main input{
+    width: 95vw;
+    height: 50px;
+}
+
+    /*Buttons*/
+    .calculatorTable button{
+    width: 22vw;
+    height: 75px;
+    }
+
+    #del{
+    height: 70px;
+    }
+    
+}
+
+
+/*Moviles*/
+@media only screen and (max-width: 500px) {
+    h1{
+        position: absolute;
+        top: 75%;   
+   }
 
     /*Input*/
     main input{
