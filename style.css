@@ -1,0 +1,135 @@
+h1{
+    font-size: 40px;
+    margin-bottom: 50px;
+}
+
+main{
+    display: grid;
+    justify-content: center;
+}
+
+main input{
+    width: 500px;
+    height: 100px;
+    margin: 10px;
+
+    border-radius: 15px;
+    font-size: 50px;
+    background-color: #dbdbdb;
+}
+
+button{
+    text-align: center;
+    user-select: none;
+}
+
+.calculatorTable{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.calculatorTable button{
+    width: 125px;
+    height: 125px;
+    border-radius: 15px;
+    font-weight: 300;
+    text-align: center;
+}
+#del{
+    background-color: #dbdbdb;
+    height: 150px;
+    font-size: 50px;
+}
+
+#del:hover{
+    background-color: #ff6f6f;
+    cursor: pointer;
+}
+
+
+.Operador{
+    background-color: rgb(195, 176, 247);
+    font-size: 50px;
+}
+
+.Operador:hover{
+    background-color: rgb(143, 122, 202);
+    cursor: pointer;
+}
+
+
+.Numero{
+    background-color: aqua;
+    font-size: 30px;
+}
+
+.Numero:hover{
+    background-color: rgb(1, 214, 214);
+    cursor: pointer;
+}
+
+.calculatorTable tr{
+   display: grid;
+   grid-template-rows: repeat(4, 1fr);
+}
+
+.calculatorTable td{
+   display: grid;
+   grid-template-columns: repeat(4, 1fr);
+   column-gap: 5px;
+}
+
+
+
+/*Moviles muy pequeños*/
+@media only screen and (max-width: 320px) {
+    h1{
+        display: none;
+    }
+
+    /*Input*/
+    main input{
+    width: 95vw;
+    height: 50px;
+}
+
+    /*Buttons*/
+    .calculatorTable button{
+    width: 22vw;
+    height: 75px;
+    }
+
+    #del{
+    height: 70px;
+    }
+    
+}
+
+
+/*EFECTS AND ANIMATIONS*/
+
+/*CLICK EFECT*/
+@keyframes clicked {
+    0% {
+        transform: scale(1);
+    }
+    25% {
+        transform: scale(0.7);
+    }
+    50%{
+        transform: scale(0.5);
+    }
+    75%{
+        transform: scale(0.7);
+    }
+    100% {
+        transform: scale(1);
+    }
+    
+}
+
+.clicked{
+    animation: clicked 0.1s;
+}
